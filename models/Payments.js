@@ -1,5 +1,4 @@
-import mongoose from "mongoose";
-import { Schema, model } from "mongoose";
+import { Schema, model, models } from "mongoose";
 const PaymentsSchema = new Schema({
     name: {
         type: String,
@@ -34,4 +33,4 @@ const PaymentsSchema = new Schema({
     },
 })
 
-export default mongoose.models.Payments || model('Payments', PaymentsSchema)
+export default models.Payments || model('Payments', PaymentsSchema)
